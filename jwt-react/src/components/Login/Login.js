@@ -1,9 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { useHistory, useLocation } from "react-router-dom";
 
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-
 import { UserContext } from '../../contexts/userContext.js'
 import { loginUser, logoutUser } from '../../api/auth.js'
 
@@ -60,27 +57,27 @@ function Login() {
   }
 
   return <div>
-    <Form onSubmit={onLoginFormSubmit} method="POST">
-      <Form.Group controlId="username">
-        <Form.Label>Username</Form.Label>
-        <Form.Control
+    <form onSubmit={onLoginFormSubmit} method="POST">
+      <div>
+        <label>Username</label>
+        <input
           onChange={(event)=>{setUsername(event.target.value)}}
           type="text"
           id="username"
           name="username"/>
-      </Form.Group>
+      </div>
       <br/>
-      <Form.Group controlId="password">
-        <Form.Label>Password</Form.Label>
-        <Form.Control
+      <div>
+        <label>Password</label>
+        <input
           onChange={(event)=>{setPassword(event.target.value)}}
           type="text"
           id="password"
           name="password"/>
-      </Form.Group>
-      <Button type="submit">login</Button>
+      </div>
+      <button type="submit">login</button>
       <p style={{color: 'red'}}>{errorDisplay}</p>
-    </Form>
+    </form>
   </div>
 }
 
