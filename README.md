@@ -1,5 +1,5 @@
-# nyc-food-map
-Map of street food in nyc
+# My Personal Template
+This is a modified version of the jwt template. This version has a basic front page setup on the front end and no models on the backend yet.
 
 # React DRF SimpleJWT App
 
